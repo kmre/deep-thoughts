@@ -15,9 +15,10 @@
   "author": "Matt Brassey",
   "license": "CC0-1.0",
   "dependencies": {
-    "if-env": "^1.0.4"
+    "if-env": "^1.0.4",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^6.3.0"
   }
 }
