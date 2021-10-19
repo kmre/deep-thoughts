@@ -1,24 +1,25 @@
 {
-  "name": "deep-thoughts",
+  "name": "mern-server",
   "version": "1.0.0",
-  "description": "MERN (MongoDB, Express.js, React, and Node.js) stack social network",
-  "main": "server/server.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "cd server && npm start",
-    "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    "install": "cd server && npm i && cd ../client && npm i",
-    "seed": "cd server && npm run seed",
-    "heroku-postbuild": "cd client && npm run build && cd ../server && npm run seed"
+    "start": "node server.js",
+    "watch": "nodemon",
+    "seed": "node seeders/seeds.js"
   },
   "keywords": [],
-  "author": "Matt Brassey",
-  "license": "CC0-1.0",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "if-env": "^1.0.4",
-    "jsonwebtoken": "^8.5.1"
+    "apollo-server-express": "^2.12.0",
+    "bcrypt": "^4.0.1",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.9"
   },
   "devDependencies": {
-    "concurrently": "^6.3.0"
+    "nodemon": "^2.0.3"
   }
 }

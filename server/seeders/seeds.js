@@ -70,7 +70,6 @@ db.once('open', async () => {
     );
   }
 
-  console.log(userData);
   console.log('all done!');
   process.exit(0);
 });
