@@ -29,7 +29,8 @@ const Profile = (props) => {
     return <div>Loading...</div>;
   }
 
-  if (!user?.username) {
+  // if (!user?.username) {
+  if (!Auth.loggedIn()) {
     return (
       <h4>
         You need to be logged in to see this. Use the navigation links above to
@@ -62,6 +63,8 @@ const Profile = (props) => {
         )}
       </div>
 
+      <div className="mb-3">{!userParam && <ThoughtForm />}</div>
+
       <div className="flex-row justify-space-between mb-3">
         <div className="col-12 mb-3 col-lg-8">
           <ThoughtList
@@ -78,7 +81,7 @@ const Profile = (props) => {
           />
         </div>
       </div>
-      <div className="mb-3">{!userParam && <ThoughtForm />}</div>
+
     </div>
   );
 };

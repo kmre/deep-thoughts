@@ -12,7 +12,7 @@
     "heroku-postbuild": "cd client && npm run build && cd ../server && npm run seed"
   },
   "keywords": [],
-  "author": "Matt Brassey",
+  "author": "",
   "license": "CC0-1.0",
   "dependencies": {
     "@apollo/client": "^3.4.16",
