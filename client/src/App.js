@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 //import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+// import { InMemoryCache, createHttpLink } from '@apollo/client';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 
@@ -14,6 +15,11 @@ import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 
+// const httpLink = createHttpLink({
+//   // uri: 'http://localhost:3001/graphql',
+//   uri: '/graphql',
+// });
+
 const client = new ApolloClient({
   request: operation => {
     const token = localStorage.getItem('id_token');
@@ -25,6 +31,8 @@ const client = new ApolloClient({
     });
   },
   uri: '/graphql'
+  // link: authLink.concat(httpLink),
+  // cache: new InMemoryCache(),
 });
 
 function App() {
